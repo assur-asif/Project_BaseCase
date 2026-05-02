@@ -1,3 +1,4 @@
+package project_1;
 import java.util.Scanner;
 
 public class Assesment1_shop
