@@ -25,8 +25,6 @@ public class Shop
             System.out.println("Restart the application.");
             return;
         }
-        else 
-        {
         
         String[] productNames = new String[num];
         double[] prices = new double[num];
@@ -58,12 +56,9 @@ public class Shop
 
             itemTotal += prices[i] * quantities[i];
         }
-        
-        subtotal += itemTotal;
-       }
-          
 
-          Cart cart = new Cart();
+        subtotal += itemTotal;
+        Cart cart = new Cart();
           
           cart.generate(productNames, prices, quantities, subtotal);
     }
