@@ -55,7 +55,7 @@ public class Assesment1_shop
         System.out.printf("Discount Applied: %.2f $\n",discount_got);
         System.out.println("Total (Rounded Down): "+ final_price+ " $");
         System.out.println();
-        System.out.println("---Happy Shopping With AuraGaming---");
+        System.out.println("---Happy Shopping With Aura-Gaming---");
         System.out.println();
 
     }
