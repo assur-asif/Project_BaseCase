@@ -16,14 +16,24 @@ public class Shop
     {   
         try { Thread.sleep(600);} catch (InterruptedException e) {
             e.printStackTrace();}
-        System.out.print("How many products do you want to purchase?(Max 5) ->  ");
-        int num = sc.nextInt();
-        sc.nextLine();
-        if(num > 5)
+
+        int num;
+
+        while(true)
         {
-            System.out.println("Limit exceeded! Maximum 5 products allowed.");
-            System.out.println("Restart the application.");
-            return;
+            System.out.print("How many products do you want to purchase?(Max 5) ->  ");
+            num = sc.nextInt();
+            sc.nextLine();
+
+            if(num > 5)
+            {
+                System.out.println("Limit exceeded! Maximum 5 products allowed.");
+                System.out.println("Try again...\n");
+            }
+            else
+            {
+                break;
+            }
         }
         
         String[] productNames = new String[num];
@@ -32,7 +42,6 @@ public class Shop
 
         double itemTotal = 0;
         double subtotal = 0;
-    
 
         for(int i = 0; i < num; i++)
         {
@@ -60,6 +69,6 @@ public class Shop
         subtotal += itemTotal;
         Cart cart = new Cart();
           
-          cart.generate(productNames, prices, quantities, subtotal);
+        cart.generate(productNames, prices, quantities, subtotal);
     }
 }
