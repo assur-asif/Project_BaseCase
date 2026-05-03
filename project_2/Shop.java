@@ -18,14 +18,15 @@ public class Shop
             e.printStackTrace();}
         System.out.print("How many products do you want to purchase?(Max 5) ->  ");
         int num = sc.nextInt();
-        
+        sc.nextLine();
         if(num > 5)
         {
             System.out.println("Limit exceeded! Maximum 5 products allowed.");
             System.out.println("Restart the application.");
             return;
         }
-        sc.nextLine();
+        else 
+        {
         
         String[] productNames = new String[num];
         double[] prices = new double[num];
@@ -57,8 +58,10 @@ public class Shop
 
             itemTotal += prices[i] * quantities[i];
         }
-
-          subtotal += itemTotal;
+        
+        subtotal += itemTotal;
+       }
+          
 
           Cart cart = new Cart();
           
